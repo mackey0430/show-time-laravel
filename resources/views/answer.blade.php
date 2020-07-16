@@ -3,48 +3,50 @@
 
 <head>
     <meta charset="utf-8">
-    <title>PostCreate</title>
+    <title>answer</title>
     <meta name="viewport" content="width=devicescale-width,initial-scale=1">
-    <link rel="stylesheet" href="{{ asset('css/postcreate.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/answer.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 </head>
 
 <body>
     <!-- ヘッダー -->
     <div class="header_container">
-        <img src= "{{ asset('image/showtime_logo.png') }}" class="header_logo">
+        <img src="./image/showtime_logo.png" class="header_logo">
     </div>
-        
+
     <!-- ヘッダー用の空白 -->
     <div class="header_margin"></div>
 
-    <div class="message_container">
-        <div class="message_wrapper">
-            <h1>お題を作ろう</h1>
-            <h4>
-                お題を作って友達とシェアしよう。
-                </br>
-            </h4>
-        </div>
-    </div>
-
-    <!-- お題作成 -->
+    
+    <!-- 回答するお題 -->
     <div class="post_container">
         <div class="post_wrapper">
             <div class="post_template">
                 <img src="./image/topic_bar.png" style="width: 100%;">
-                <textarea class="post_container_text" placeholder="&#13;&#10;お題の内容を入力..."></textarea>
+                <textarea class="post_container_text">ネコがギリギリ言えそうな人間の言葉を教えて下さい</textarea>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 回答欄 -->
+    <div class="answer_container">
+        <div class="answer_wrapper">
+            <div class="answer_template">
+                <img src="./image/answer_topic_bar.png" style="width: 100%;">
+                <textarea class="answer_container_text" placeholder="ここに回答を&#13;&#10;入力してください"></textarea>
             </div>
             <div class="answer_button_container">
                 <div class="answer_button_wrapper">
-                    <!-- 出題ボタン -->
+                    <!-- 回答ボタン -->
                     <a href="answer.html" class="answer_button">
-                        出題する
+                        回答する
                     </a>
                 </div>
             </div>
         </div>
     </div>
+
 
     <footer>
         <a href="#">・プライバシーポリシー</a>
@@ -77,7 +79,7 @@
             </a>
         </div>
     </div>
-
+    
 </body>
 
 </html>

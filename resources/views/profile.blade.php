@@ -3,54 +3,29 @@
 
 <head>
     <meta charset="utf-8">
-    <title>PostCreate</title>
+    <title>Profile</title>
     <meta name="viewport" content="width=devicescale-width,initial-scale=1">
-    <link rel="stylesheet" href="{{ asset('css/postcreate.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
 </head>
 
 <body>
-    <!-- ヘッダー -->
-    <div class="header_container">
-        <img src= "{{ asset('image/showtime_logo.png') }}" class="header_logo">
-    </div>
-        
-    <!-- ヘッダー用の空白 -->
-    <div class="header_margin"></div>
-
-    <div class="message_container">
-        <div class="message_wrapper">
-            <h1>お題を作ろう</h1>
-            <h4>
-                お題を作って友達とシェアしよう。
-                </br>
-            </h4>
-        </div>
-    </div>
-
-    <!-- お題作成 -->
-    <div class="post_container">
-        <div class="post_wrapper">
-            <div class="post_template">
-                <img src="./image/topic_bar.png" style="width: 100%;">
-                <textarea class="post_container_text" placeholder="&#13;&#10;お題の内容を入力..."></textarea>
-            </div>
-            <div class="answer_button_container">
-                <div class="answer_button_wrapper">
-                    <!-- 出題ボタン -->
-                    <a href="answer.html" class="answer_button">
-                        出題する
+    <div class="profile_header">
+        <h3>チェアマンのプロフィール</h3>
+        <div class="icon_container">
+            <img src="./image/icon.png" class="profile_icon">
+            <span class="profile_details">
+                <div class="profile_name">
+                    五味辻無残
+                    <a href="{{ url('/setting') }}">
+                    <i class="fas fa-cog setting_icon"></i>
                     </a>
                 </div>
-            </div>
+                <div class="profile_status">
+                    お題数12 回答数12
+                </div>
         </div>
     </div>
-
-    <footer>
-        <a href="#">・プライバシーポリシー</a>
-        <a href="#">・利用規約</a>
-        <a href="#">・アプリの使い方</a>　
-    </footer>
 
     <!-- ボトムタブバー -->
     <div class="buttom_tab_wrapper">

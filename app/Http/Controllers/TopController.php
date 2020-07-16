@@ -15,4 +15,25 @@ class TopController extends Controller
     {
         return view('post_create');
     }
+
+    public function answer()
+    {
+        return view('answer');
+    }
+
+    public function profile()
+    {
+        return view('profile');
+    }
+
+    public function setting()
+    {
+        return view('setting');
+    }
+
+     public function timeline()
+    {
+        return view('timeline');
+    }
+    
 }

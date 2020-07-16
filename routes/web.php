@@ -20,3 +20,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'TopController@index');
 
 Route::get('/post_create', 'TopController@post_create');
+
+Route::get('/timeline', 'TopController@timeline');
+
+Route::get('/profile', 'TopController@profile');
+
+Route::get('/setting', 'TopController@setting');
+
+Route::get('/answer', 'TopController@answer');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
