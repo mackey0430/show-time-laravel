@@ -6,11 +6,10 @@
             <h1>お題を作ろう</h1>
             <h4>
                 お題を作って友達とシェアしよう。
-                </br>
             </h4>
         </div>
     </div>
-
+　　
     <!-- お題作成 -->
     <div class="post_container">
         <div class="post_wrapper">
@@ -21,7 +20,7 @@
             <div class="answer_button_container">
                 <div class="answer_button_wrapper">
                     <!-- 出題ボタン -->
-                    <a href="answer.html" class="answer_button">
+                    <a href="{{ url('/answer') }}" class="answer_button">
                         出題する
                     </a>
                 </div>
@@ -34,4 +33,5 @@
         <a href="#">・利用規約</a>
         <a href="#">・アプリの使い方</a>　
     </footer>
+    
 @endsection

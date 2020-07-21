@@ -12,7 +12,7 @@ h4 {
 header {
     text-align: center;
     background-color: #2C2C2C;
-    padding: 1vh;
+    width: 414px;
 }
 
 .auto_post_setting {
@@ -20,6 +20,7 @@ header {
     background-color: #2C2C2C;
     padding: 13px;
     padding-left: 3vh;
+    width: 414px;
 }
 
 .auto_post_ {
@@ -124,7 +125,6 @@ button {
     padding-bottom: 1vh;
 }
 
-
 /* ボトムタブ */
 
 .buttom_tab {
@@ -140,7 +140,6 @@ button {
     display: flex;
 }
 
-
 /* 友達のお題ボタン */
 
 .buttom_tab_firend_post {
@@ -153,14 +152,12 @@ button {
     text-decoration: none;
 }
 
-
 /* 友達のお題ボタンのアイコン */
 
 .friend_post_icon {
     color: white;
     font-size: 3vh;
 }
-
 
 /* お題を作るボタン */
 
@@ -174,14 +171,12 @@ button {
     text-align: center;
 }
 
-
 /* お題を作るボタンのアイコン */
 
 .add_post_icon {
     height: 60px;
     width: 60px;
 }
-
 
 /* アカウントボタン */
 
@@ -194,14 +189,12 @@ button {
     text-align: center;
 }
 
-
 /* アカウントボタンのアイコン */
 
 .account_icon {
     color: white;
     font-size: 3vh;
 }
-
 
 /* アイコンのテキスト */
 

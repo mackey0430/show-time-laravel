@@ -1,58 +1,106 @@
-<!DOCTYPE HTML>
-<html lang="ja">
+@extends('layouts.app')
+@section('content')
 
-<head>
-    <meta charset="utf-8">
-    <title>Profile</title>
-    <meta name="viewport" content="width=devicescale-width,initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
-</head>
+<h3>チェアマンのプロフィール <a class="fas fa-cog" href="{{ url('/setting') }}"></a></h3>
+<div class="profile_container">
+    <div class="profile_wrapper">
+        <!-- アイコン画像 -->
+        <div class="profile_icon">
+            <img　src="{{ asset('image/icon.png') }}" class="icon">
+        </div>
 
-<body>
-    <div class="profile_header">
-        <h3>チェアマンのプロフィール</h3>
-        <div class="icon_container">
-            <img src="./image/icon.png" class="profile_icon">
-            <span class="profile_details">
-                <div class="profile_name">
-                    五味辻無残
-                    <a href="{{ url('/setting') }}">
-                    <i class="fas fa-cog setting_icon"></i>
+        <!-- ユーザー名、お題数、回答数 -->
+        <div class="profile_detail">
+            <div class="username">
+                五味辻無残
+            </div>
+
+            <div class="counts_container">
+                <div class="counts_wrapper">
+                    <div class="counter">
+                        <p class="counts">12</p>
+                        <p class="title">お題数</p>
+                    </div>
+
+                    <div class="counter">
+                        <p class="counts">20</p>
+                        <p class="title">回答数</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+    <!--  回答フォーム1 -->
+    <div class="post_container">
+        <div class="post_wrapper">
+            <div class="post_template">
+                <img src="./image/topic_bar.png" style="width: 100%;">
+                <textarea class="post_container_text">ネコがギリギリ言えそうな人間の言葉を教えて下さい</textarea>
+            </div>
+            <div class="post_button_wrapper">
+                <div class="like_button_wrapper">
+                    <!-- ライクボタン -->
+                    <a class="fas fa-heart" href="#"></a>
+                    <!-- twiierボタン -->
+                    <a class="fab fa-twitter" href="#"></a>
+                </div>
+                <div class="answer_button_wrapper">
+                    <!-- 回答ボタン -->
+                    <a href="{{ url('/answer') }}" class="answer_button">
+                        回答する
                     </a>
                 </div>
-                <div class="profile_status">
-                    お題数12 回答数12
+            </div>
+        </div>
+    </div>
+
+  <!--  回答フォーム1 -->
+    <div class="post_container">
+        <div class="post_wrapper">
+            <div class="post_template">
+                <img src="./image/topic_bar.png" style="width: 100%;">
+                <textarea class="post_container_text">ネコがギリギリ言えそうな人間の言葉を教えて下さい</textarea>
+            </div>
+            <div class="post_button_wrapper">
+                <div class="like_button_wrapper">
+                    <!-- ライクボタン -->
+                    <a class="fas fa-heart" href="#"></a>
+                    <!-- twiierボタン -->
+                    <a class="fab fa-twitter" href="#"></a>
                 </div>
+                <div class="answer_button_wrapper">
+                    <!-- 回答ボタン -->
+                    <a href="{{ url('/answer') }}" class="answer_button">
+                        回答する
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- ボトムタブバー -->
-    <div class="buttom_tab_wrapper">
-        <div class="buttom_tab">
-            <!-- 友達のお題ボタン -->
-            <a href="{{ url('/timeline') }}" class="buttom_tab_firend_post">
-                <i class="fas fa-users friend_post_icon">
-                    </br>
-                    <span class="buttom_tab_text">友達のお題</span>
-                </i>
-            </a>
-            <!-- お題作成ボタン -->
-            <a href="{{ url('/post_create') }}" class="buttom_tab_button">
-                <img src="./image/Buttom_tab_post_create_button.png" class="add_post_icon">
-                </br>
-                <span class="buttom_tab_text">お題を作る</span>
-            </a>
-            <!-- アカウントボタン -->
-            <a href="{{ url('/profile') }}" class="buttom_tab_account">
-                <i class="fas fa-user-circle account_icon">
-                    </br>
-                    <span class="buttom_tab_text">アカウント</span>
-                </i>
-            </a>
+   <!--  回答フォーム1 -->
+    <div class="post_container">
+        <div class="post_wrapper">
+            <div class="post_template">
+                <img src="./image/topic_bar.png" style="width: 100%;">
+                <textarea class="post_container_text">ネコがギリギリ言えそうな人間の言葉を教えて下さい</textarea>
+            </div>
+            <div class="post_button_wrapper">
+                <div class="like_button_wrapper">
+                    <!-- ライクボタン -->
+                    <a class="fas fa-heart" href="#"></a>
+                    <!-- twiierボタン -->
+                    <a class="fab fa-twitter" href="#"></a>
+                </div>
+                <div class="answer_button_wrapper">
+                    <!-- 回答ボタン -->
+                    <a href="{{ url('/answer') }}" class="answer_button">
+                        回答する
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-
-</body>
-
-</html>

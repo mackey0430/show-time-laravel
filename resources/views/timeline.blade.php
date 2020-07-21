@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
+
     <!--  回答フォーム1 -->
     <div class="post_container">
         <div class="post_wrapper">
