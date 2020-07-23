@@ -102,4 +102,5 @@
         <a href="#">・利用規約</a>
         <a href="#">・アプリの使い方</a>　
     </footer>
+
 @endsection

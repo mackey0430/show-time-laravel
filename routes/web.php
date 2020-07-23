@@ -19,7 +19,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'TopController@index');
 
-Route::get('/post_create', 'TopController@post_create');
+Route::get('/posts/create', 'PostsController@create');
+
+Route::post('/posts', 'PostsController@store');
 
 Route::get('/timeline', 'TopController@timeline');
 

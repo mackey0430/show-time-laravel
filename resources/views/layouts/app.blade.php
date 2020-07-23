@@ -44,8 +44,8 @@
                 </i>
             </a>
             <!-- お題作成ボタン -->
-            <a href="{{ url('/post_create') }}" class="buttom_tab_button">
-                <img src="./image/Buttom_tab_post_create_button.png" class="add_post_icon">
+            <a href="{{ url('/post/create') }}" class="buttom_tab_button">
+                <img src="{{asset('/image/Buttom_tab_post_create_button.png')}}" class="add_post_icon">
                 </br>
                 <span class="buttom_tab_text">お題を作る</span>
             </a>
