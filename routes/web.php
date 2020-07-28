@@ -19,18 +19,25 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'TopController@index');
 
-Route::get('/posts/create', 'PostsController@create');
-
 Route::post('/posts', 'PostsController@store');
 
-Route::get('/timeline', 'TopController@timeline');
+Route::get('/timeline/index', 'TimelineController@index');
 
-Route::get('/profile', 'TopController@profile');
+Route::get('/profile/index', 'ProfileController@profile');
 
 Route::get('/setting', 'TopController@setting');
 
-Route::get('/answer', 'TopController@answer');
+Route::get('/answer/create', 'AnswerController@answer');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => ['auth']], function () {
+    // この中のURLは認証が必要
+    Route::get('/posts/create', 'PostsController@create');
+});
+
+Route::get('auth/twitter', 'Auth\SocialAuthController@redirectToProvider');
+
+Route::get('auth/twitter/callback', 'Auth\SocialAuthController@handleProviderCallback');

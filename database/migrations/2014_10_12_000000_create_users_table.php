@@ -22,6 +22,9 @@ class CreateUsersTable extends Migration
             $table->string('thumbnail')->nullable();
             $table->rememberToken();
             $table->timestamps();
+            $table->string('twitter_id');
+            $table->string('token')->nullable();
+            $table->string('nickname');
         });
     }
 

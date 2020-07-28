@@ -5,7 +5,7 @@
     <div class="post_container">
         <div class="post_wrapper">
             <div class="post_template">
-                <img src="./image/topic_bar.png" style="width: 100%;">
+                <img src="{{ asset('/image/topic_bar.png') }}" style="width: 100%;">
                 <textarea class="post_container_text">ネコがギリギリ言えそうな人間の言葉を教えて下さい</textarea>
             </div>
         </div>
@@ -15,7 +15,7 @@
     <div class="answer_container">
         <div class="answer_wrapper">
             <div class="answer_template">
-                <img src="./image/answer_topic_bar.png" style="width: 100%;">
+                <img src="{{ asset('/image/answer_topic_bar.png') }}" style="width: 100%;">
                 <textarea class="answer_container_text" placeholder="ここに回答を&#13;&#10;入力してください"></textarea>
             </div>
             <div class="answer_button_container">

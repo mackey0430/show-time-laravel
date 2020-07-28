@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// postモデルを読み込む
 use App\Post;
 
 use Auth;
@@ -21,9 +22,11 @@ class PostsController extends Controller
 
         // 保存処理
         $post = new Post;
+
         $post->body = $body;
         // $post->user_id = Auth::id();
         $post->user_id = 12345;
         $post->save();
+        return redirect('/timeline/index');
     }
 }

@@ -244,6 +244,19 @@ h4 {
   box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.5);
 }
 
+.create_button {
+  padding: 6px 20px;
+  font-size: 16px;
+  text-align: center;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: 0.2s;
+  box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.5);
+}
+
 .answer_button:hover {
   background-color: #ffe800;
   color: black;
@@ -356,34 +369,4 @@ h3 {
   border: none;
   text-align: center;
   resize: none;
-}
-
-.answer_button_container {
-  width: 323px;
-  height: 50px;
-  margin: 0 auto;
-  padding: 5px;
-}
-
-.answer_button_wrapper {
-  padding-top: 10px;
-  text-align: right;
-}
-
-.answer_button {
-  padding: 10px 20px;
-  font-size: 16px;
-  text-align: center;
-  color: black;
-  background-color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 25px;
-  transition: 0.2s;
-  box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.answer_button:hover {
-  background-color: #ffe800;
-  color: black;
 }

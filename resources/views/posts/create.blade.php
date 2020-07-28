@@ -23,7 +23,7 @@
                 <div class="answer_button_container">
                     <div class="answer_button_wrapper">
                         <!-- 出題ボタン -->
-                        <input type="submit"  class="answer_button" value="出題する">
+                        <input type="submit"  class="create_button" value="出題する">
                     </div>
                 </div>
             </div>

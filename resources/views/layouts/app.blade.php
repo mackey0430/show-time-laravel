@@ -37,20 +37,20 @@
     <div class="buttom_tab_wrapper">
         <div class="buttom_tab">
             <!-- 友達のお題ボタン -->
-            <a href="{{ url('/timeline') }}" class="buttom_tab_firend_post">
+            <a href="{{ url('/timeline/index') }}" class="buttom_tab_firend_post">
                 <i class="fas fa-users friend_post_icon">
                     </br>
                     <span class="buttom_tab_text">友達のお題</span>
                 </i>
             </a>
             <!-- お題作成ボタン -->
-            <a href="{{ url('/post/create') }}" class="buttom_tab_button">
+            <a href="{{ url('/posts/create') }}" class="buttom_tab_button">
                 <img src="{{asset('/image/Buttom_tab_post_create_button.png')}}" class="add_post_icon">
                 </br>
                 <span class="buttom_tab_text">お題を作る</span>
             </a>
             <!-- アカウントボタン -->
-            <a href="{{ url('/profile') }}" class="buttom_tab_account">
+            <a href="{{ url('/profile/index') }}" class="buttom_tab_account">
                 <i class="fas fa-user-circle account_icon">
                     </br>
                     <span class="buttom_tab_text">アカウント</span>
