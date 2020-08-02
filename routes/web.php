@@ -33,10 +33,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['middleware' => ['auth']], function () {
-    // この中のURLは認証が必要
-    Route::get('/posts/create', 'PostsController@create');
-});
+// Route::group(['middleware' => ['auth']], function () {
+//     // この中のURLは認証が必要
+//     Route::get('/posts/create', 'PostsController@create');
+// });
+
+Route::get('/posts/create', 'PostsController@create');
 
 Route::get('auth/twitter', 'Auth\SocialAuthController@redirectToProvider');
 
