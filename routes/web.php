@@ -25,7 +25,7 @@ Route::get('/timeline/index', 'TimelineController@index');
 
 Route::get('/profile/index', 'ProfileController@profile');
 
-Route::get('/setting', 'TopController@setting');
+Route::get('profile/setting', 'SettingController@setting');
 
 Route::get('/answer/create', 'AnswerController@answer');
 

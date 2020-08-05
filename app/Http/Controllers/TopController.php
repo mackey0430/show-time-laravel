@@ -15,11 +15,5 @@ class TopController extends Controller
     {
         return view('answer');
     }
-
-    public function setting()
-    {
-        return view('setting');
-    }
-
     
 }
