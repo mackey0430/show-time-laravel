@@ -9,7 +9,7 @@
             </h4>
         </div>
     </div>
-　　
+
     <!-- お題作成 -->
     <div class="post_container">
         <form method="post" action="{{ url('/posts') }}">
@@ -33,7 +33,7 @@
     <footer>
         <a href="#">・プライバシーポリシー</a>
         <a href="#">・利用規約</a>
-        <a href="#">・アプリの使い方</a>　
+        <a href="#">・アプリの使い方</a>
     </footer>
     
 @endsection

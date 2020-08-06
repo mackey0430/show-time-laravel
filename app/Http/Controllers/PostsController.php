@@ -15,6 +15,10 @@ class PostsController extends Controller
         return view("posts.create");
     }
 
+    public function send(){
+        return view("posts.send");
+    }
+    
     public function store(Request $request){
         $body = $request->body;
         // 処理をすべて中止して、画面に文字を表示
@@ -27,6 +31,7 @@ class PostsController extends Controller
         // $post->user_id = Auth::id();
         $post->user_id = 12345;
         $post->save();
-        return redirect('/timeline/index');
+        return redirect('/posts/send');
     }
+
 }

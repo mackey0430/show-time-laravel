@@ -11,4 +11,9 @@ class AnswerController extends Controller
         return view('answer.create');
     }
 
+     public function send()
+    {
+        return view('answer.send');
+    }
+
 }

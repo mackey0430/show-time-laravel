@@ -21,7 +21,7 @@
             <div class="answer_button_container">
                 <div class="answer_button_wrapper">
                     <!-- 回答ボタン -->
-                    <a href="answer.html" class="answer_button">
+                    <a href="{{ url('/answer/send') }}" class="answer_button">
                         回答する
                     </a>
                 </div>

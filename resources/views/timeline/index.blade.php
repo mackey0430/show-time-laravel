@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
-
+<h1>他のお題を見よう</h1>
+<h3>お題をタップすると他の人の回答が見えるよ</h3>
     <!--  回答フォーム1 -->
     @foreach ($posts as $post)
     <div class="post_container">
@@ -20,7 +21,7 @@
                 </div>
                 <div class="answer_button_wrapper">
                     <!-- 回答ボタン -->
-                    <a href="Answer.html" class="answer_button">
+                    <a href="{{ url('/answer/create') }}" class="answer_button">
                         回答する
                     </a>
                 </div>

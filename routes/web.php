@@ -21,6 +21,8 @@ Route::get('/', 'TopController@index');
 
 Route::post('/posts', 'PostsController@store');
 
+Route::get('/posts/send', 'PostsController@send');
+
 Route::get('/timeline/index', 'TimelineController@index');
 
 Route::get('/profile/index', 'ProfileController@profile');
@@ -28,6 +30,8 @@ Route::get('/profile/index', 'ProfileController@profile');
 Route::get('profile/setting', 'SettingController@setting');
 
 Route::get('/answer/create', 'AnswerController@answer');
+
+Route::get('/answer/send', 'AnswerController@send');
 
 Auth::routes();
 

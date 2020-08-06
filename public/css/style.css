@@ -262,12 +262,18 @@ h4 {
   color: black;
 }
 
-h3 {
+/* profile/index */
+
+.profile_header {
   margin: 0 auto;
   color: white;
   text-align: center;
   background-color: #2c2c2c;
   width: 414px;
+  height: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
 }
 
 .fa-cog {
@@ -331,6 +337,47 @@ h3 {
   font-size: 20px;
 }
 
+/* タブ */
+
+.area {
+  width: 414px;
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.tab_class {
+  width: 207px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  line-height: 50px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  float: left;
+  order: -1;
+}
+
+input[name="tab_name"] {
+  display: none;
+}
+
+input:checked+.tab_class {
+  background-color: black;
+  color: #ffe800;
+  border-bottom: medium solid white;
+}
+
+.content_class {
+  display: none;
+  width: 100%;
+}
+
+input:checked+.tab_class+.content_class {
+  display: block;
+}
+
 /* 回答 */
 
 .answer_container {
@@ -370,6 +417,8 @@ h3 {
   text-align: center;
   resize: none;
 }
+
+/* proflie/setting */
 
 .setting_container {
   width: 414px;
@@ -504,4 +553,146 @@ h3 {
   color: red;
   padding-top: 5px;
   margin: 0 auto;
+}
+
+/* posts/send */
+
+.send_container {
+  width: 414px;
+}
+
+.send_container h1 {
+  color: white;
+  text-align: center;
+  background-color: black;
+}
+
+.send_container p {
+  color: white;
+  text-align: center;
+  margin: 5px;
+}
+
+.send_post_container {
+  width: 414px;
+  height: 240px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.send_post_wrapper {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.add_post_button_container {
+  width: 414px;
+  height: 80px;
+}
+
+.add_post_button {
+  margin: 0 auto;
+  color: black;
+  background-color: #FFD901;
+  font-weight: bold;
+  width: 280px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 10px 5px 5px 5px;
+  text-align: center;
+}
+
+.twitter_share_button_container {
+  width: 414px;
+  height: 80px;
+}
+
+.twitter_share_button {
+  color: white;
+  background-color: #69ABE9;
+  font-weight: bold;
+  width: 280px;
+  height: 30px;
+  padding: 10px 5px 5px 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.twitter_share_button .fab {
+  color: white;
+  font-size: 18px;
+}
+
+/* answer/send */
+
+.send_container {
+  width: 414px;
+}
+
+.send_container h1 {
+  color: white;
+  text-align: center;
+  background-color: black;
+}
+
+.send_container p {
+  color: white;
+  text-align: center;
+  margin: 5px;
+}
+
+.send_post_container {
+  width: 414px;
+  height: 240px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.send_post_wrapper {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.add_post_button_container {
+  width: 414px;
+  height: 80px;
+}
+
+.add_post_button {
+  margin: 0 auto;
+  color: black;
+  background-color: #FFD901;
+  font-weight: bold;
+  width: 280px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 10px 5px 5px 5px;
+  text-align: center;
+}
+
+.twitter_share_button_container {
+  width: 414px;
+  height: 80px;
+}
+
+.twitter_share_button {
+  color: white;
+  background-color: #69ABE9;
+  font-weight: bold;
+  width: 280px;
+  height: 30px;
+  padding: 10px 5px 5px 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.twitter_share_button .fab {
+  color: white;
+  font-size: 18px;
 }
