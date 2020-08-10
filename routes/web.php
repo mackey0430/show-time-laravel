@@ -27,6 +27,8 @@ Route::get('/timeline/index', 'TimelineController@index');
 
 Route::get('/profile/index', 'ProfileController@profile');
 
+Route::post('/profile/index', 'ProfileController@display_posted_theme');
+
 Route::get('profile/setting', 'SettingController@setting');
 
 Route::get('/answer/create', 'AnswerController@answer');

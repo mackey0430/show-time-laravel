@@ -15,8 +15,10 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+    //  ここのカラムしか更新できない
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'nickname', 'twitter_id','thumbnail','token',
     ];
 
     /**

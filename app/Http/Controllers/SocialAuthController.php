@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
-
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Socialite;
@@ -46,26 +46,34 @@ class SocialAuthController extends Controller
 
     private function findOrCreateUser($twitterUser)
     {
-        //  $twitterUserの中のidでusersテーブルを検索する。（select * from users WHERE twitter_id = users）
-
-        $id = DB::table('users')->where('twitter_id',$twitterUser->id)->exists();
-
-        // 「1」の操作で見つからなかったら、usersテーブルに新規ユーザーを追加
-        if($id = false){
-            $user = new User;
-            $user = $twitterUser;
-            $user->save;
-        }
+        $existsUser = DB::table('users')->where('twitter_id',$twitterUser->id)->exists();
 
         // 「1」の操作で見つかった場合は、usersテーブルのname, nickname, thumbnail, tokenを更新
-        else{
-            DB::table('users')->where('twitter_id', $twitterUser->id)->update(['name' => $twitterUser->name]);
-            DB::table('users')->where('twitter_id', $twitterUser->id)->update(['nickname' => $twitterUser->nickname]);
-            DB::table('users')->where('twitter_id', $twitterUser->id)->update(['thumbnail' => $twitterUser->avatar]);
-            DB::table('users')->where('twitter_id', $twitterUser->id)->update(['token' => $twitterUser->token]);
+        if($existsUser){
+            User::where('twitter_id', $twitterUser->id)
+                ->update([
+                    'name' => $twitterUser->name,
+                    'nickname' => $twitterUser->nickname,
+                    'thumbnail' => $twitterUser->avatar,
+                    'token' => $twitterUser->token,
+                ]);
+            // 最新のモデルをとってきて、モデルの形で返す。(getだと、配列で返ってくる)
+            $user = User::where('twitter_id', $twitterUser->id)->first();
+            //  出来上がったuserモデルを返す
+            return $user;
         }
 
-        //  出来上がったuserモデルを返す
-        return ;
+        // 「1」の操作で見つからなかったら、usersテーブルに新規ユーザーを追加
+        else{
+            $user = User::create([
+                'name' => $twitterUser->name,
+                'nickname' => $twitterUser->nickname,
+                'twitter_id' => $twitterUser->id,
+                'thumbnail' => $twitterUser->avatar,
+                'token' => $twitterUser->token,
+            ]);
+             //  出来上がったuserモデルを返す
+            return $user;
+        }
     }
 }

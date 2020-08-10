@@ -18,18 +18,16 @@ class PostsController extends Controller
     public function send(){
         return view("posts.send");
     }
-    
+
     public function store(Request $request){
         $body = $request->body;
-        // 処理をすべて中止して、画面に文字を表示
-        // dd($body);
 
         // 保存処理
         $post = new Post;
 
         $post->body = $body;
-        // $post->user_id = Auth::id();
-        $post->user_id = 12345;
+        // ログインしてる人のIDを取得
+        $post->user_id = Auth::id();
         $post->save();
         return redirect('/posts/send');
     }
