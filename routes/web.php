@@ -31,7 +31,7 @@ Route::get('profile/setting', 'SettingController@setting');
 
 Route::get('/answer/{id}', 'AnswerController@show')->name('answer.show');
 
-Route::get('/answer/send', 'AnswerController@send');
+Route::get('/answer/send', 'TimelineController@index')->name('answer.send');
 
 Route::post('/answer/store', 'AnswerController@store');
 

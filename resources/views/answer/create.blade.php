@@ -24,9 +24,7 @@
                 <div class="answer_button_container">
                     <div class="answer_button_wrapper">
                         <!-- 回答ボタン -->
-                        <a href="{{ route('answer.show', ['id' => $post->id]) }}" class="answer_button">
-                        回答する
-                        </a>
+                        <input type=submit class="answer_button" value="回答する">
                     </div>
                 </div>
             </div>
