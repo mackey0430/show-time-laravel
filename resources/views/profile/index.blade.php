@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="profile_header">
-    チェアマンのプロフィール <a class="fas fa-cog" href="{{ url('profile/setting') }}"></a>
+    {{ Auth::user()->name }}のプロフィール <a class="fas fa-cog" href="{{ url('profile/setting') }}"></a>
 </div>
 
 <div class="profile_container">
@@ -15,13 +15,13 @@
         <!-- ユーザー名、お題数、回答数 -->
         <div class="profile_detail">
             <div class="username">
-                五味辻無残
+                {{ Auth::user()->name }}
             </div>
 
             <div class="counts_container">
                 <div class="counts_wrapper">
                     <div class="counter">
-                        <p class="counts">12</p>
+                    <p class="counts">{{$posts->count()}}</p>
                         <p class="title">お題数</p>
                     </div>
 

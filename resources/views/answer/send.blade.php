@@ -9,7 +9,7 @@
         <div class="send_post_wrapper">
             <div class="answer_template">
                 <img src="{{ asset('image/answer_topic_bar.png') }}" style="width: 100%;">
-                <textarea class="post_container_text" placeholder="&#13;&#10;送信した回答が表示されます" name="body"></textarea>
+                <p class="post_container_text" name="body">{{$answer->body}}</p>
             </div>
         </div>
     </div>

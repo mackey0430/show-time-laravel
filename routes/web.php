@@ -25,15 +25,15 @@ Route::get('/posts/send', 'PostsController@send');
 
 Route::get('/timeline/index', 'TimelineController@index');
 
-Route::get('/profile/index', 'ProfileController@profile');
-
-Route::post('/profile/index', 'ProfileController@display_posted_theme');
+Route::get('/profile', 'ProfileController@index');
 
 Route::get('profile/setting', 'SettingController@setting');
 
-Route::get('/answer/create', 'AnswerController@answer');
+Route::get('/answer/{id}', 'AnswerController@show')->name('answer.show');
 
 Route::get('/answer/send', 'AnswerController@send');
+
+Route::post('/answer/store', 'AnswerController@store');
 
 Auth::routes();
 

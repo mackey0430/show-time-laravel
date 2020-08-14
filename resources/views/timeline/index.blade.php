@@ -9,7 +9,7 @@
             <div class="post_template">
                 <img src="{{ asset('image/topic_bar.png') }}" style="width: 100%;">
                 <p class="post_container_text">
-                    {{ $post->body}}
+                    {{$post->body}}
                 </p>
             </div>
             <div class="post_button_wrapper">
@@ -21,7 +21,7 @@
                 </div>
                 <div class="answer_button_wrapper">
                     <!-- 回答ボタン -->
-                    <a href="{{ url('/answer/create') }}" class="answer_button">
+                    <a href="{{ route('answer.show', ['id' => $post->id]) }}" class="answer_button">
                         回答する
                     </a>
                 </div>

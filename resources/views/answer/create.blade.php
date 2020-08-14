@@ -6,28 +6,32 @@
         <div class="post_wrapper">
             <div class="post_template">
                 <img src="{{ asset('/image/topic_bar.png') }}" style="width: 100%;">
-                <textarea class="post_container_text">ネコがギリギリ言えそうな人間の言葉を教えて下さい</textarea>
+            <p class="post_container_text">{{$post->body}}</p>
             </div>
         </div>
     </div>
     
     <!-- 回答欄 -->
-    <div class="answer_container">
-        <div class="answer_wrapper">
-            <div class="answer_template">
-                <img src="{{ asset('/image/answer_topic_bar.png') }}" style="width: 100%;">
-                <textarea class="answer_container_text" placeholder="ここに回答を&#13;&#10;入力してください"></textarea>
-            </div>
-            <div class="answer_button_container">
-                <div class="answer_button_wrapper">
-                    <!-- 回答ボタン -->
-                    <a href="{{ url('/answer/send') }}" class="answer_button">
+    <form method="post" action="{{ url('/answer/store') }}">
+    <!-- csrf攻撃対策 -->
+    @csrf 
+        <div class="answer_container">
+            <div class="answer_wrapper">
+                <div class="answer_template">
+                    <img src="{{ asset('/image/answer_topic_bar.png') }}" style="width: 100%;">
+                    <textarea class="answer_container_text" placeholder="ここに回答を&#13;&#10;入力してください" name="body"></textarea>
+                </div>
+                <div class="answer_button_container">
+                    <div class="answer_button_wrapper">
+                        <!-- 回答ボタン -->
+                        <a href="{{ route('answer.show', ['id' => $post->id]) }}" class="answer_button">
                         回答する
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 
     <footer>
         <a href="#">・プライバシーポリシー</a>

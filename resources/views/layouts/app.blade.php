@@ -50,7 +50,7 @@
                 <span class="buttom_tab_text">お題を作る</span>
             </a>
             <!-- アカウントボタン -->
-            <a href="{{ url('/profile/index') }}" class="buttom_tab_account">
+            <a href="{{ url('/profile') }}" class="buttom_tab_account">
                 <i class="fas fa-user-circle account_icon">
                     </br>
                     <span class="buttom_tab_text">アカウント</span>
