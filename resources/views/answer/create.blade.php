@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-  
+
     <!-- 回答するお題 -->
     <div class="post_container">
         <div class="post_wrapper">
@@ -10,9 +10,10 @@
             </div>
         </div>
     </div>
-    
+
     <!-- 回答欄 -->
     <form method="post" action="{{ url('/answer/store') }}">
+    
     <!-- csrf攻撃対策 -->
     @csrf 
         <div class="answer_container">

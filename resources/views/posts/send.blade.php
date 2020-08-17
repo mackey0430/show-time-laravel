@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+
 <div class="send_container">
     <h1>お題を送信しました</h1>
     <p>もっとお題を出して</p>
@@ -9,7 +10,7 @@
         <div class="send_post_wrapper">
             <div class="post_template">
                 <img src="{{ asset('image/topic_bar.png') }}" style="width: 100%;">
-                <textarea class="post_container_text" placeholder="&#13;&#10;送信したお題が表示されます" name="body"></textarea>
+                <p class="post_container_text" name="body" style="color: black">{{$post->body}}</p>
             </div>
         </div>
     </div>
@@ -27,6 +28,7 @@
             <a><i class="fab fa-twitter" href="#"></i>twitterでシェアする</a> 
         </div>
     </div>
+    
 </div>
 
 @endsection

@@ -25,13 +25,15 @@ Route::get('/posts/send', 'PostsController@send');
 
 Route::get('/timeline/index', 'TimelineController@index');
 
+Route::get('/posts/answer_list', 'PostsController@');
+
 Route::get('/profile', 'ProfileController@index');
 
 Route::get('profile/setting', 'SettingController@setting');
 
 Route::get('/answer/{id}', 'AnswerController@show')->name('answer.show');
 
-Route::get('/answer/send', 'TimelineController@index')->name('answer.send');
+Route::get('/answer/send', 'AnswerController@send')->name('answer.send');
 
 Route::post('/answer/store', 'AnswerController@store');
 

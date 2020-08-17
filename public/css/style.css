@@ -140,6 +140,11 @@ footer a {
 
 h1 {
   color: white;
+  margin: 0 auto;
+}
+
+h3 {
+  color: white;
 }
 
 h4 {
@@ -174,6 +179,11 @@ h4 {
   text-align: center;
   margin-bottom: 10px;
   margin-top: 10px;
+}
+
+.post_template a {
+  text-decoration: none;
+  color: black;
 }
 
 .post_container_text {
@@ -315,6 +325,12 @@ h4 {
 .icon_image {
   width: 80px;
   height: 80px;
+}
+
+.icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
 }
 
 .counts_container {
@@ -559,6 +575,7 @@ input:checked+.tab_class+.content_class {
 
 .send_container {
   width: 414px;
+  margin: 0 auto;
 }
 
 .send_container h1 {
@@ -695,4 +712,18 @@ input:checked+.tab_class+.content_class {
 .twitter_share_button .fab {
   color: white;
   font-size: 18px;
+}
+
+.title_container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.answered_container {
+  background-color: #2c2c2c;
+  width: 414px;
+  height: 280px;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
 }

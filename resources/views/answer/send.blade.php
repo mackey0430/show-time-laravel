@@ -4,12 +4,13 @@
     <h1>回答を送信しました</h1>
     <p>他のお題にも答えて</p>
     <p>どんどんを笑いを取ろう。</p>
+
     <!-- 送信したお題 -->
     <div class="send_post_container">
         <div class="send_post_wrapper">
             <div class="answer_template">
                 <img src="{{ asset('image/answer_topic_bar.png') }}" style="width: 100%;">
-                {{-- <p class="post_container_text" name="body">{{$answer->body}}</p> --}}
+                <p class="post_container_text" name="body" style="color: black">{{$answer->body}}</p>
             </div>
         </div>
     </div>

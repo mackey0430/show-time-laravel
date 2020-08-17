@@ -54,7 +54,7 @@ class SocialAuthController extends Controller
                 ->update([
                     'name' => $twitterUser->name,
                     'nickname' => $twitterUser->nickname,
-                    'thumbnail' => $twitterUser->avatar,
+                    'thumbnail' => $twitterUser->avatar_original,
                     'token' => $twitterUser->token,
                 ]);
             // 最新のモデルをとってきて、モデルの形で返す。(getだと、配列で返ってくる)

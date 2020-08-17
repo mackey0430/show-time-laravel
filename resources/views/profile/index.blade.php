@@ -9,15 +9,13 @@
     <div class="profile_wrapper">
         <!-- アイコン画像 -->
         <div class="profile_icon">
-            <img src="{{ asset('image/icon.png') }}" class="icon">
+            <img src="{{ Auth::user()->thumbnail }}" class="icon">
         </div>
-
         <!-- ユーザー名、お題数、回答数 -->
         <div class="profile_detail">
             <div class="username">
                 {{ Auth::user()->name }}
             </div>
-
             <div class="counts_container">
                 <div class="counts_wrapper">
                     <div class="counter">
@@ -66,26 +64,38 @@
                         </a>
                     </div>
                 </div>
-            </div>
+             </div>
         </div>
         @endforeach 
     </div>
 
-    
     {{-- 回答したお題タブ --}}
     <input type="radio" name="tab_name" id="tab2" >
     <label class="tab_class" for="tab2">回答したお題</label>
     <div class="content_class">
     <!-- 自分が回答したお題 -->
-    <div class="answer_container">
+    @foreach ($answers as $answer)
+    <div class="answered_container">
         <div class="answer_wrapper">
             <div class="answer_template">
                 <img src="{{ asset('/image/answer_topic_bar.png') }}" style="width: 100%;">
-                <textarea class="answer_container_text" placeholder="ここに回答を&#13;&#10;入力してください"></textarea>
+                <p class="post_container_text">
+                    {{$answer->body}}
+                </p>
+            </div>
+            <div class="post_button_wrapper">
+                <div class="like_button_wrapper">
+                    <!-- ライクボタン -->
+                    <a class="fas fa-heart" href="#"></a>
+                    <!-- twiierボタン -->
+                    <a class="fab fa-twitter" href="#"></a>
+                </div>
             </div>
         </div>
     </div>
-    </div>
+    @endforeach
 </div>
 
+</div>
 @endsection
+
