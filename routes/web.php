@@ -25,9 +25,7 @@ Route::get('/posts/send', 'PostsController@send');
 
 Route::get('/timeline/index', 'TimelineController@index');
 
-Route::get('/posts/answer_list', 'PostsController@');
-
-Route::get('/profile', 'ProfileController@index');
+Route::get('/posts/{id}', 'PostsController@show')->name('posts.show');
 
 Route::get('profile/setting', 'SettingController@setting');
 
@@ -35,19 +33,22 @@ Route::get('/answer/{id}', 'AnswerController@show')->name('answer.show');
 
 Route::get('/answer/send', 'AnswerController@send')->name('answer.send');
 
-Route::post('/answer/store', 'AnswerController@store');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Route::group(['middleware' => ['auth']], function () {
-//     // この中のURLは認証が必要
-//     Route::get('/posts/create', 'PostsController@create');
-// });
-
-Route::get('/posts/create', 'PostsController@create');
+// この中のURLは認証が必要
+Route::group(['middleware' => ['auth']], function () {
+    // お題作成
+    Route::get('/posts/create', 'PostsController@create')->name('post.create');
+    // 回答作成
+    Route::post('/answer/store', 'AnswerController@store');
+    // プロフィール画面
+    Route::get('/profile', 'ProfileController@index');
+});
 
 Route::get('auth/twitter', 'Auth\SocialAuthController@redirectToProvider');
 
 Route::get('auth/twitter/callback', 'Auth\SocialAuthController@handleProviderCallback');
+
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');

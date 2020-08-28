@@ -10,7 +10,7 @@
         <div class="post_wrapper">
 
             <div class="post_template">
-            <a href="#">
+            <a href = "{{ url("posts/{$post->id}")}}">
                 <img src="{{ asset('image/topic_bar.png') }}" style="width: 100%;">
                 <p class="post_container_text">
                     {{$post->body}}
@@ -22,9 +22,9 @@
             <div class="post_button_wrapper">
                 <div class="like_button_wrapper">
                     <!-- ライクボタン -->
-                    <a class="fas fa-heart" href="#"></a>
+                    <a class="far fa-heart" href="#"></a>
                     <!-- twiierボタン -->
-                    <a class="fab fa-twitter" href="#"></a>
+                    <a class="fab fa-twitter" href="http://twitter.com/share?url=https://www.youtube.com/&text=あああ&hashtags=安倍総理"></a>
                 </div>
                 <div class="answer_button_wrapper">
                     <!-- 回答ボタン -->

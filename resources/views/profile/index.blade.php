@@ -24,7 +24,7 @@
                     </div>
 
                     <div class="counter">
-                        <p class="counts">20</p>
+                        <p class="counts">{{$answers->count()}}</p>
                         <p class="title">回答数</p>
                     </div>
 
@@ -53,7 +53,7 @@
                 <div class="post_button_wrapper">
                     <div class="like_button_wrapper">
                         <!-- ライクボタン -->
-                        <a class="fas fa-heart" href="#"></a>
+                        <a class="far fa-heart" href="#"></a>
                         <!-- twiierボタン -->
                         <a class="fab fa-twitter" href="#"></a>
                     </div>
@@ -86,7 +86,7 @@
             <div class="post_button_wrapper">
                 <div class="like_button_wrapper">
                     <!-- ライクボタン -->
-                    <a class="fas fa-heart" href="#"></a>
+                    <a class="far fa-heart" href="#"></a>
                     <!-- twiierボタン -->
                     <a class="fab fa-twitter" href="#"></a>
                 </div>

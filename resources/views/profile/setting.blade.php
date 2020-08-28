@@ -20,7 +20,7 @@
             </div>
             <p>アカウント管理</p>
             <div class="logout">
-            <a href=#>ログアウトする</a>
+            <a href="/logout">ログアウトする</a>
             </div>
 
         </div>

@@ -35,7 +35,7 @@ class AnswerController extends Controller
         // 保存する
         $answer->save();
         // 変数ポストを渡してanswer.sendを表示する
-        return view('answer.send',['answer' => $answer]);
+        return view('answer.send',compact('answer'));
     }
 
 }

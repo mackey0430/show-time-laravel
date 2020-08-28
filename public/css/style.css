@@ -727,3 +727,12 @@ input:checked+.tab_class+.content_class {
   padding-top: 10px;
   margin-bottom: 10px;
 }
+
+.answer_list_container {
+  width: 414px;
+  margin: 0 auto;
+}
+
+.answer_list_container h1 {
+  text-align: center;
+}
