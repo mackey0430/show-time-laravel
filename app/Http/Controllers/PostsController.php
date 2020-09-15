@@ -67,7 +67,7 @@ class PostsController extends Controller
         $post->likes()->attach(Auth::id());
 
         return response()
-            ->json(['success' => 'いいね完了！' , 'id' => $id]);
+            ->json(['success' => 'いいね完了！' , 'count' => $post->likes()->count()]);
     }
 
     // $idには投稿のID
@@ -81,7 +81,7 @@ class PostsController extends Controller
         $post->likes()->detach(Auth::id());
 
         return response()
-            ->json(['remove' => 'いいね解除！']);
+            ->json(['remove' => 'いいね解除！','count' => $post->likes()->count()]);
     }
 
 }   

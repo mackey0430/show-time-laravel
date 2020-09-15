@@ -155,13 +155,17 @@ $(document).on("click", ".like", function () {
     }
   }).done(function (data) {
     // 通信が成功した時
-    console.log(data); // クラスを追加
+    console.log(data.count); // クラスを追加
 
     $(_this).addClass("fas removeLike"); // クラスを削除
 
-    $(_this).removeClass("far like");
+    $(_this).removeClass("far like"); //クリックした要素の子要素であるspanタグのテキストをdata.countに書き換える
+
+    $(_this).children("span").text(data.count);
   }).fail(function (error) {// 通信が失敗した時
-  });
+  }); // aタグのデフォルトの処理を中断させる
+
+  return false;
 }); // いいねを解除する時
 
 $(document).on("click", ".removeLike", function () {
@@ -183,13 +187,17 @@ $(document).on("click", ".removeLike", function () {
     }
   }).done(function (data) {
     // 通信が成功した時
-    console.log(data); // クラスを追加
+    console.log(data.count); // クラスを追加
 
     $(_this2).addClass("far like"); // クラスを削除
 
-    $(_this2).removeClass("fas removeLike");
+    $(_this2).removeClass("fas removeLike"); //クリックした要素の子要素であるspanタグのテキストをdata.countに書き換える
+
+    $(_this2).children("span").text(data.count);
   }).fail(function (error) {// 通信が失敗した時
-  });
+  }); // aタグのデフォルトの処理を中断させる
+
+  return false;
 });
 
 /***/ }),
