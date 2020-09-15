@@ -40,11 +40,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 // この中のURLは認証が必要
 Route::group(['middleware' => ['auth']], function () {
     // お題作成
-    Route::get('/posts/create', 'PostsController@create')->name('post.create');
+    Route::get('/posts', 'PostsController@create')->name('post.create');
     // 回答作成
     Route::post('/answer/store', 'AnswerController@store');
     // プロフィール画面
     Route::get('/profile', 'ProfileController@index');
+    // いいね
+    Route::post('/post/like', 'PostsController@like')->name('post.like');
+    // いいね解除
+    Route::post('/post/removeLike', 'PostsController@removeLike')->name('post.removelike');
 });
 
 Route::get('auth/twitter', 'Auth\SocialAuthController@redirectToProvider');

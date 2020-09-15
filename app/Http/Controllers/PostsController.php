@@ -16,7 +16,6 @@ use DB;
 class PostsController extends Controller
 {
     public function create(){
-        dd(1);
         return view("posts.create");
        
         
@@ -55,6 +54,34 @@ class PostsController extends Controller
         // dd(DB::getQueryLog());
 
         return view('posts.answer_list',compact('post','answers'));
+    }
+
+    // $idには投稿のID
+    public function like(Request $request){
+        $id = $request->id;
+        // postモデルとlikesメソッドを実行する
+        $post = Post::find($id);
+        // $post = Post::find($id)->with('likes');
+
+        // いいね実行
+        $post->likes()->attach(Auth::id());
+
+        return response()
+            ->json(['success' => 'いいね完了！' , 'id' => $id]);
+    }
+
+    // $idには投稿のID
+    public function removeLike(Request $request){
+        $id = $request->id;
+        // postモデルとlikesメソッドを実行する
+        $post = Post::find($id);
+        // $post = Post::find($id)->with('likes');
+
+        // いいね実行
+        $post->likes()->detach(Auth::id());
+
+        return response()
+            ->json(['remove' => 'いいね解除！']);
     }
 
 }   
